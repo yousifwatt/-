@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>الم الشتاء | Winter Realm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="snowfield" aria-hidden="true"></div>
+  <header class="topbar glass">
+    <a class="brand" href="#home" aria-label="العودة للرئيسية"><span class="brand-mark">❄️</span><span><b>الم الشتاء</b><small>Winter Realm</small></span></a>
+    <nav><a href="#home">الرئيسية</a><a href="#games">الألعاب</a><a href="#about">كيف تلعب؟</a></nav>
+    <button id="stormBtn" class="icon-btn" title="تفعيل العاصفة الثلجية">🌨️ <span>العاصفة</span></button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-wrap">
+      <div class="hero-copy"><span class="eyebrow">❄️ تعلّم • العب • اكتشف</span><h1>رحلة دافئة<br><em>في عالم الشتاء</em></h1><p>لعبة عربية تعليمية وترفيهية تعرّفك على مفردات الشتاء من خلال التهجئة، سرعة البديهة، والذاكرة.</p><div class="hero-actions"><a class="btn primary" href="#games">ابدأ المغامرة <span>←</span></a><a class="btn ghost" href="#about">كيف ألعب؟</a></div></div>
+      <div class="hero-art glass"><div class="moon">☾</div><div class="mountain back"></div><div class="mountain front"></div><div class="cabin">🏠</div><div class="steam">♨️</div><div class="hero-badge"><strong id="heroScore">0</strong><span>أفضل نقاط</span></div></div>
+    </section>
+
+    <section id="games" class="section-wrap"><div class="section-heading"><div><span class="eyebrow">اختر تحديك</span><h2>ألعاب الشتاء</h2></div><span class="score-pill">🏆 مجموعك: <b id="totalScore">0</b></span></div>
+      <div class="game-grid">
+        <article class="game-card glass spelling-card"><div class="game-icon">🔤</div><div><span class="tag blue">تعلم الكلمات</span><h3>تركيب الحروف</h3><p>رتّب الحروف لتكتشف كلمات شتوية جديدة.</p><button class="btn small" data-open="spelling">العب الآن ←</button></div></article>
+        <article class="game-card glass catch-card"><div class="game-icon">🧺</div><div><span class="tag orange">سرعة وتركيز</span><h3>صيد الثلج</h3><p>حرّك السلة واجمع الهدايا وتجنب القنابل!</p><button class="btn small" data-open="catch">العب الآن ←</button></div></article>
+        <article class="game-card glass memory-card"><div class="game-icon">🧠</div><div><span class="tag purple">اختبر ذاكرتك</span><h3>ذاكرة الشتاء</h3><p>طابق الكلمة العربية مع رمزها الصحيح.</p><button class="btn small" data-open="memory">العب الآن ←</button></div></article>
+      </div>
+    </section>
+
+    <section id="about" class="info-grid section-wrap"><div class="glass info-card"><span class="eyebrow">مصمم للجميع</span><h2>مغامرة تعليمية ممتعة</h2><p>تعلّم أسماء الملابس والمشروبات والأنشطة الشتوية بطريقة تفاعلية. سجّل أفضل نتائجك، واستمتع بمؤثرات صوتية خفيفة دون تحميل أي ملفات.</p><div class="feature-list"><span>✓ واجهة عربية RTL</span><span>✓ يعمل على الهاتف</span><span>✓ حفظ تلقائي للنتائج</span><span>✓ أصوات Web Audio</span></div></div><div class="glass leaderboard"><h3>🏆 لوحة الأبطال</h3><p class="muted">أفضل إنجازاتك محفوظة على جهازك</p><ol id="leaderboard"><li>لا توجد نتائج بعد — كن أول بطل!</li></ol></div></section>
+  </main>
+
+  <div id="gameModal" class="modal" aria-hidden="true"><div class="modal-box glass"><button class="close" id="closeModal">×</button><div id="gameContent"></div></div></div>
+  <div id="toast" class="toast">أحسنت!</div>
+  <footer>الم الشتاء ❄️ — اصنع ذكريات دافئة في أبرد الأيام</footer>
+  <script src="script.js"></script>
+</body>
+</html>
